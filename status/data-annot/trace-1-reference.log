@@ -1,0 +1,8 @@
++ rel=https://github.com/onedimkurt/bioinfo-workshop/releases/download/data-v1
++ curl -fsSL --retry 5 -o chr20.fa.gz https://github.com/onedimkurt/bioinfo-workshop/releases/download/data-v1/chr20.fa.gz
++ zcat chr20.fa.gz
++ /opt/conda/envs/variants-ready/bin/samtools faidx chr20.fa
++ for f in NA12878_GIAB_v4.2.1_window.vcf.gz NA12878_GIAB_v4.2.1_window.vcf.gz.tbi
++ curl -fsSL --retry 5 -o NA12878_GIAB_v4.2.1_window.vcf.gz https://github.com/onedimkurt/bioinfo-workshop/releases/download/data-v1/NA12878_GIAB_v4.2.1_window.vcf.gz
++ for f in NA12878_GIAB_v4.2.1_window.vcf.gz NA12878_GIAB_v4.2.1_window.vcf.gz.tbi
++ curl -fsSL --retry 5 -o NA12878_GIAB_v4.2.1_window.vcf.gz.tbi https://github.com/onedimkurt/bioinfo-workshop/releases/download/data-v1/NA12878_GIAB_v4.2.1_window.vcf.gz.tbi

@@ -1,0 +1,117 @@
+  [D2.1] check/day1-start.txt
+  [D2.1] envs/rnaseq.yml
+  [D2.1] scripts/day1.R
+  [D2.2] a new codespace: Day-1 environments are gone, files came back
+  [D2.3] 
+  [D2.3] 2. gün kurulum kontrolü
+  [D2.3] 
+  [D2.3]   PASS  Çalışma klasörünüz depo klasörüdür
+  [D2.3]   PASS  Makine: 4 çekirdek, yaklaşık 16 GB bellek
+  [D2.3]   PASS  Depo GitHub'a bağlı: /tmp/github/bioinfo-workshop.git
+  [D2.3]   PASS  Dünkü betik (scripts/day1.R) depoda
+  [D2.3]   SKIP  2. günün verileri henüz indirilmemiş
+  [D2.3]         Sırası gelince setup/day2.sh dosyasındaki komutları yazınız (veya bash setup/day2.sh).
+  [D2.3]   SKIP  envs/variants.yml henüz yok
+  [D2.3]         Sırası gelince slayttaki listeye bakarak envs/variants.yml dosyasını yazınız.
+  [D2.3] 
+  [D2.3] ----------------------------------------
+  [D2.3] geçti: 4   kaldı: 0   atlandı: 2
+  [D2.3] RESULT: PASS
+  [D2.4] NA12878_window_2.fastq.gz: OK
+  [D2.4] chr20.fa.gz: OK
+  [D2.4] pbmc3k_filtered_gene_bc_matrices.tar.gz: OK
+  [D2.4] barcodes.tsv
+  [D2.4] genes.tsv
+  [D2.4] matrix.mtx
+  [D2.5]   typing-inspection  conda-forge/noarch::typing-inspection-0.4.4-pyhcf101f3_0 
+  [D2.5]   typing_extensions  conda-forge/noarch::typing_extensions-4.16.0-pyhcf101f3_0 
+  [D2.5]   tzdata             conda-forge/noarch::tzdata-2026c-h151e31d_0 
+  [D2.5]   urllib3            conda-forge/noarch::urllib3-2.8.0-pyhd8ed1ab_0 
+  [D2.5]   xorg-libice        conda-forge/linux-64::xorg-libice-1.1.2-h280c20c_0 
+  [D2.5]   xorg-libsm         conda-forge/linux-64::xorg-libsm-1.2.6-h0d788c3_1 
+  [D2.5]   xorg-libx11        conda-forge/linux-64::xorg-libx11-1.8.13-he1eb515_1 
+  [D2.5]   xorg-libxau        conda-forge/linux-64::xorg-libxau-1.0.12-h7cc23a3_2 
+  [D2.5]   xorg-libxdmcp      conda-forge/linux-64::xorg-libxdmcp-1.1.5-h7cc23a3_2 
+  [D2.5]   xorg-libxext       conda-forge/linux-64::xorg-libxext-1.3.7-h7cc23a3_1 
+  [D2.5]   xorg-libxfixes     conda-forge/linux-64::xorg-libxfixes-6.0.2-h7cc23a3_1 
+  [D2.5]   xorg-libxi         conda-forge/linux-64::xorg-libxi-1.8.3-h7cc23a3_1 
+  [D2.5]   xorg-libxrandr     conda-forge/linux-64::xorg-libxrandr-1.5.5-h7cc23a3_1 
+  [D2.5]   xorg-libxrender    conda-forge/linux-64::xorg-libxrender-0.9.12-hb03c661_1 
+  [D2.5]   xorg-libxt         conda-forge/linux-64::xorg-libxt-1.3.1-h7cc23a3_1 
+  [D2.5]   xorg-libxtst       conda-forge/linux-64::xorg-libxtst-1.2.5-h7cc23a3_4 
+  [D2.5]   yaml               conda-forge/linux-64::yaml-0.2.5-hebe6cf0_3 
+  [D2.5]   zipp               conda-forge/noarch::zipp-4.1.1-pyh5ded981_0 
+  [D2.5]   zlib-ng            conda-forge/linux-64::zlib-ng-2.3.3-hce19668_1 
+  [D2.5]   zstd               conda-forge/linux-64::zstd-1.5.7-hb78ec9c_7 
+  [D2.5] 
+  [D2.5] 
+  [D2.5] 
+  [D2.5] Downloading and Extracting Packages: ...working... done
+  [D2.5] Preparing transaction: ...working... done
+  [D2.5] Verifying transaction: ...working... done
+  [D2.5] Executing transaction: ...working... done
+  [D2.5] WARNING conda.conda_pypi.main:notify_externally_managed_future(156): 
+  [D2.5]   Did you know? You can install many PyPI packages with conda
+  [D2.5]   using the conda-pypi beta. Get started:
+  [D2.5]     https://docs.conda.io/projects/conda/en/stable/new-features.html
+  [D2.5] 
+  [D2.5] #
+  [D2.5] # To activate this environment, use
+  [D2.5] #
+  [D2.5] #     $ conda activate variants
+  [D2.5] #
+  [D2.5] # To deactivate an active environment, use
+  [D2.5] #
+  [D2.5] #     $ conda deactivate
+  [D2.6] /opt/conda/envs/variants/bin/bgzip
+  [D2.6] /opt/conda/envs/variants/bin/tabix
+  [D2.6] /opt/conda/envs/variants/bin/bwa
+  [D2.6] variants env works
+  [D2.7] 
+  [D2.7] 2. gün kurulum kontrolü
+  [D2.7] 
+  [D2.7]   PASS  Çalışma klasörünüz depo klasörüdür
+  [D2.7]   PASS  Makine: 4 çekirdek, yaklaşık 16 GB bellek
+  [D2.7]   PASS  Depo GitHub'a bağlı: /tmp/github/bioinfo-workshop.git
+  [D2.7]   PASS  Dünkü betik (scripts/day1.R) depoda
+  [D2.7]   PASS  2. günün dört dosyası indirilmiş; sağlama toplamları (checksum) doğru
+  [D2.7]   PASS  PBMC 3k matrisi açılmış (data/filtered_gene_bc_matrices/hg19)
+  [D2.7]   PASS  envs/variants.yml yazılmış (ad ve altı araç doğru)
+  [D2.7]   PASS  variants ortamı oluşturulmuş
+  [D2.7] 
+  [D2.7] ----------------------------------------
+  [D2.7] geçti: 8   kaldı: 0   atlandı: 0
+  [D2.7] RESULT: PASS
+  [D2.8] 
+  [D3.1] capstone_pasilla_gene_counts.tsv.gz: OK
+  [D3.1] capstone_pasilla_samples.csv: OK
+  [D3.1] chr20.fa.gz: OK
+  [D3.1] pbmc3k_filtered_gene_bc_matrices.tar.gz: OK
+  [D3.2] portable file and explicit lock written
+  [D3.3] R version 4.6.1 (2026-06-24) 
+  [D3.4] Error in install.packages("praise", lib = tempfile("lib")) : 
+  [D3.4]   unable to install packages
+  [D3.4] Execution halted
+  [D3.5] 
+  [D3.6] 
+  [D3.6] 3. gün kurulum kontrolü
+  [D3.6] 
+  [D3.6]   PASS  Çalışma klasörünüz depo klasörüdür
+  [D3.6]   PASS  Depo GitHub'a bağlı: /tmp/github/bioinfo-workshop.git
+  [D3.6]   PASS  Önceki iki günün betikleri depoda
+  [D3.6]   PASS  Gönderilmemiş sürüm (commit) yok
+  [D3.6]   PASS  envs/rnaseq.yml depoda
+  [D3.6]   PASS  envs/variants.yml depoda
+  [D3.6]   SKIP  rnaseq ortamı bu codespace'te yok
+  [D3.6]         Gerekirse conda env create -f envs/rnaseq.yml ile yeniden oluşturabilirsiniz; dosyanız depoda olduğu sürece ortam kaybolmaz.
+  [D3.6]   PASS  variants ortamı bu codespace'te var
+  [D3.6]   PASS  Bitirme çalışmasının iki dosyası indirilmiş; sağlama toplamları (checksum) doğru
+  [D3.6] 
+  [D3.6] ----------------------------------------
+  [D3.6] geçti: 8   kaldı: 0   atlandı: 1
+  [D3.6] RESULT: PASS
+  [D3.7] 5363e4c Day 3: reproducibility files
+  [D3.7] 6c13830 Day 2: variants env and scripts
+  [D3.7] 0eb27cd Day 1: envs and scripts
+  [D3.7] 2450bf9 Day 1 start
+  [D3.7] f3124c7 Initial commit

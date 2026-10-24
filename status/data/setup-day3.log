@@ -1,0 +1,28 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  163k  100  163k    0     0   400k      0 --:--:-- --:--:-- --:--:--  400k
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   527  100   527    0     0   1494      0 --:--:-- --:--:-- --:--:--  1494
+NA12878_window_1.fastq.gz: OK
+NA12878_window_2.fastq.gz: OK
+SRR1039508_1.sub.fastq.gz: OK
+SRR1039508_2.sub.fastq.gz: OK
+SRR1039509_1.sub.fastq.gz: OK
+SRR1039509_2.sub.fastq.gz: OK
+airway_samples.csv: OK
+capstone_pasilla_gene_counts.tsv.gz: OK
+capstone_pasilla_samples.csv: OK
+chr20.fa.gz: OK
+gencode.v50.transcripts.chr.fa.gz: OK
+genes.gencode.v50.tsv.gz: OK
+pbmc3k_filtered_gene_bc_matrices.tar.gz: OK
+salmon_quant.SRR1039512.tar.gz: OK
+salmon_quant.SRR1039513.tar.gz: OK
+salmon_quant.SRR1039516.tar.gz: OK
+salmon_quant.SRR1039517.tar.gz: OK
+salmon_quant.SRR1039520.tar.gz: OK
+salmon_quant.SRR1039521.tar.gz: OK
+tx2gene.gencode.v50.tsv.gz: OK

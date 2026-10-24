@@ -1,0 +1,11 @@
+SRR1039513	ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/003/SRR1039513/SRR1039513.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/003/SRR1039513/SRR1039513_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/003/SRR1039513/SRR1039513_2.fastq.gz	b3073b5b057f24208ac1853fdd4b5875;945cb34259d6dbf0362fe9018f769de4;ecb43490d03c9b325352e70488d58611	43356464
+skipped (unpaired reads, not used): SRR1039513.fastq.gz
+fq/SRR1039513_1.fastq.gz: MD5 OK (945cb34259d6dbf0362fe9018f769de4) after 1 attempt(s), last via https
+fq/SRR1039513_2.fastq.gz: attempt 1 via https ended with curl exit 0, 921283600 bytes so far
+fq/SRR1039513_2.fastq.gz: MD5 OK (ecb43490d03c9b325352e70488d58611) after 2 attempt(s), last via ftp
+total 1796740
+-rw-r--r-- 1 root root 918567614 Oct  2 05:03 SRR1039513_1.fastq.gz
+-rw-r--r-- 1 root root 921283600 Oct  2 05:11 SRR1039513_2.fastq.gz
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:17.59
+	Maximum resident set size (kbytes): 2288768
+quant/SRR1039513/aux_info/meta_info.json:  "percent_mapped": 96.57718012293581,

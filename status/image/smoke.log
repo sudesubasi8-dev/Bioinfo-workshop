@@ -1,0 +1,100 @@
+uncompressed image size: 7.18 GB
+== bioinfo-workshop image smoke test ==
+image built: 2026-10-05 16:32 +03
+PASS  runs as rstudio                        uid=1000(rstudio) gid=1000(rstudio) groups=1000(rstudio),50(staff)
+PASS  R is 4.6.1                             R version 4.6.1 (2026-06-24) 
+PASS  Rprofile.site parses                   ok
+PASS  CRAN option is the snapshot            https://p3m.dev/cran/__linux__/noble/2026-09-18 
+PASS  R packages load                        all loaded
+PASS  rstudio can install R packages         writable
+PASS  locale tr_TR.UTF-8 exists              tr_TR.utf8
+PASS  quarto present                         1.10.18
+PASS  conda in interactive bash              conda 26.7.2
+PASS  base active, prompt (base)             base; prompt starts with (base)
+PASS  same in a login shell (RStudio)        base; prompt starts with (base)
+PASS  activate shows the new name            prompt starts with (rnaseq-ready)
+PASS  restored terminal: (base) shown        prompt starts with (base)
+PASS  restored terminal: env kept, shown     /opt/conda/envs/rnaseq-ready/bin/salmon
+PASS  conda in login bash                    function
+PASS  two fallback environments              ;base * /opt/conda;rnaseq-ready /opt/conda/envs/rnaseq-ready;variants-ready /opt/conda/envs/variants-ready;;
+PASS  names rnaseq/variants are free         bash: no job control in this shell
+PASS  channels conda-forge, bioconda         ok
+PASS  /opt/conda writable by rstudio         writable
+PASS  tool salmon in rnaseq-ready            /opt/conda/envs/rnaseq-ready/bin/salmon
+PASS  tool fastp in rnaseq-ready             /opt/conda/envs/rnaseq-ready/bin/fastp
+PASS  tool fastqc in rnaseq-ready            /opt/conda/envs/rnaseq-ready/bin/fastqc
+PASS  tool multiqc in rnaseq-ready           /opt/conda/envs/rnaseq-ready/bin/multiqc
+PASS  tool bwa in variants-ready             /opt/conda/envs/variants-ready/bin/bwa
+PASS  tool samtools in variants-ready        /opt/conda/envs/variants-ready/bin/samtools
+PASS  tool bcftools in variants-ready        /opt/conda/envs/variants-ready/bin/bcftools
+PASS  tool bgzip in variants-ready           /opt/conda/envs/variants-ready/bin/bgzip
+PASS  tool tabix in variants-ready           /opt/conda/envs/variants-ready/bin/tabix
+PASS  tool fastp in variants-ready           /opt/conda/envs/variants-ready/bin/fastp
+PASS  tool fastqc in variants-ready          /opt/conda/envs/variants-ready/bin/fastqc
+PASS  tool multiqc in variants-ready         /opt/conda/envs/variants-ready/bin/multiqc
+PASS  R Console does not see conda tools     salmon not on R PATH, as taught
+
+== solved versions (for envs/README.md and the pinned build files) ==
+-- rnaseq-ready
+fastp                      1.3.7            h43da1c4_0          bioconda
+fastqc                     0.12.1           hdfd78af_0          bioconda
+multiqc                    1.35             pyhdfd78af_2        bioconda
+openjdk                    25.0.2           h1602c4f_26         conda-forge
+python                     3.14.7           hcd007b5_106_cp314  conda-forge
+salmon                     2.8.0            hfa8f182_0          bioconda
+-- variants-ready
+bcftools                   1.24             h118bc1c_2          bioconda
+bwa                        0.7.19           h577a1d6_1          bioconda
+fastp                      1.3.7            h43da1c4_0          bioconda
+fastqc                     0.12.1           hdfd78af_0          bioconda
+htslib                     1.24             ha79157c_0          bioconda
+multiqc                    1.35             pyhdfd78af_2        bioconda
+openjdk                    25.0.2           h1602c4f_26         conda-forge
+python                     3.14.7           hcd007b5_106_cp314  conda-forge
+samtools                   1.24             h9dcdb79_1          bioconda
+-- package cache: seqkit, seqtk
+/opt/conda/pkgs/seqkit-2.14.0-hb192632_0
+/opt/conda/pkgs/seqtk-1.5-h577a1d6_1
+
+== live exercise timings (WORKSHOP.md §6 step 3) ==
+PASS  conda create deneme --offline          seqkit v2.14.0
+      took 2 s
+PASS  remove deneme                          removed
+PASS  conda create deneme (online)           seqkit v2.14.0
+      took 2 s
+PASS  export --from-history                  has-seqkit
+PASS  conda env remove -n deneme             removed
+
+== RStudio ==
+PASS  on-create writes prefs                 /tmp/ws
+PASS  start-rstudio.sh starts RStudio        [bioinfo-workshop] RStudio is running on port 8787 (PORTS tab, label RStudio).
+PASS  RStudio itself on 127.0.0.1:8788       302
+PASS  proxy on 8787 answers                  302
+PASS  redirects stay relative (curl)         relative
+PASS  redirects stay relative (Chrome)       relative:  1 Location: /; 1 Location: /auth-sign-in?appUri=%2F;
+PASS  sign-in cookie names rstudio           user-id=rstudio, no Domain attribute
+PASS  sign-in leads to the IDE               IDE page, 1103 bytes
+      (for the record) sign-in response through the proxy:
+        HTTP/1.1 302 Moved Temporarily
+        Set-Cookie: user-id=rstudio|Mon%2C%2005%20Oct%202026%2014%3A34%3A55%20GMT|0Zm%2BfQjKrQ%2FkTqEOM4%2BOypQGfLA4CZyxvXUR8vpf4qA%3D; path=/; HttpOnly
+        Set-Cookie: user-list-id=9c16856330a7400cbbbba228392a5d83|Mon%2C%2005%20Oct%202026%2014%3A34%3A55%20GMT|7GGltqroxrNq3U8kgxIpnQdDftRyW1%2F3ac4pVu3k5xk%3D; path=/; HttpOnly
+        Set-Cookie: persist-auth=0; expires=Mon, 5 Oct 2026 14:34:55 GMT; path=/; HttpOnly
+        Set-Cookie: rs-csrf-token=82f0aff4-fb10-45f3-9d38-b9f67e9df88a; path=/; HttpOnly
+        Set-Cookie: csrf-token=82f0aff4-fb10-45f3-9d38-b9f67e9df88a; path=/; HttpOnly
+        Location: /
+PASS  second start is a no-op                [bioinfo-workshop] RStudio is already running on port 8787.
+PASS  codespace variables reach R            an existing value is kept
+      (for the record) RStudio's own sign-in redirect without the proxy:
+        Location: http://localhost:8787/
+PASS  bash prompt touches the marker         touched
+PASS  R command touches the marker           touched
+PASS  keep-awake prints on activity          one line after one change
+PASS  keep-awake silent when idle            nothing printed
+PASS  sudo rule is narrow                    only-the-script
+
+== sizes ==
+2.9G	/opt/conda
+740M	/usr/local/lib/R/site-library
+overlay         145G   49G   97G  34% /
+
+SMOKE TEST: PASS

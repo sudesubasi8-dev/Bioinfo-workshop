@@ -1,0 +1,18 @@
+
+== e2e day2 day3  2026-10-05 16:42:49 +03  7722bfd731c3 ==
+D2.1   PASS    0s  after the recreate: clean, Day-1 files back from GitHub
+D2.2   PASS    1s  Day-1 environments are gone in the new codespace
+D2.3   PASS    0s  bash check/day2-setup.sh -> PASS (4-core machine)
+D2.4   PASS    4s  bash setup/day2.sh: files OK, PBMC matrix unpacked
+D2.5   PASS   22s  write envs/variants.yml; conda env create -f
+D2.6   PASS    0s  conda activate variants: samtools/bcftools 1.24, bwa, bgzip, tabix
+D2.7   PASS    1s  bash check/day2-setup.sh -> PASS, nothing skipped
+D2.8   PASS    0s  commit and push Day-2 files
+D3.1   PASS    1s  bash setup/day3.sh: capstone files OK
+D3.2   PASS    3s  conda env export --from-history and conda list --explicit
+D3.3   PASS    0s  sessionInfo(): R 4.6.1
+D3.4   PASS    1s  install.packages() of a small package from the snapshot
+D3.5   PASS    0s  commit and push
+D3.6   PASS    0s  bash check/day3-setup.sh -> PASS
+D3.7   PASS    0s  history on GitHub has every day's commits
+== e2e result: 15 PASS, 0 FAIL ==

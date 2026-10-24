@@ -1,0 +1,9 @@
+SRR1039512	ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/002/SRR1039512/SRR1039512_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR103/002/SRR1039512/SRR1039512_2.fastq.gz	a35f30576f25ea548c7b3a28895a81cf;83bbe3c587d9477938826ea19c53a281	28136282
+fq/SRR1039512_1.fastq.gz: MD5 OK (a35f30576f25ea548c7b3a28895a81cf) after 1 attempt(s), last via https
+fq/SRR1039512_2.fastq.gz: MD5 OK (83bbe3c587d9477938826ea19c53a281) after 1 attempt(s), last via https
+total 3107072
+-rw-r--r-- 1 root root 1592766115 Oct  2 04:41 SRR1039512_1.fastq.gz
+-rw-r--r-- 1 root root 1588864003 Oct  2 04:51 SRR1039512_2.fastq.gz
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 8:55.78
+	Maximum resident set size (kbytes): 2281720
+quant/SRR1039512/aux_info/meta_info.json:  "percent_mapped": 96.1337784430793,

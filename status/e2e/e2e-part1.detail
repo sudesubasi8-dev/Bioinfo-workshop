@@ -1,0 +1,189 @@
+  [P1] /home/rstudio/ws1/bioinfo-workshop
+  [P2] prompt starts with (base)
+  [P3] 
+  [P3] Ön kontrol (pre-flight)
+  [P3] 
+  [P3]   PASS  Çalışma klasörünüz depo klasörüdür (/home/rstudio/ws1/bioinfo-workshop)
+  [P3]   PASS  R 4.6.1 çalışıyor
+  [P3]         (paketler yükleniyor, yaklaşık 20 saniye sürer)
+  [P3]   PASS  Atölye paketleri yükleniyor (tidyverse, DESeq2, Seurat)
+  [P3]   PASS  conda kurulu; yedek ortamlar (environment) hazır
+  [P3]   PASS  Depo kendi hesabınızda: /tmp/github/bioinfo-workshop.git
+  [P3]   PASS  git kullanıcı adı ve e-posta tanımlı (E2E Trainee)
+  [P3]   PASS  GitHub'a gönderme (push) izni var
+  [P3]   PASS  Makine: 4 çekirdek, yaklaşık 16 GB bellek
+  [P3]   PASS  Diskte 97 GB boş yer var
+  [P3] 
+  [P3] ----------------------------------------
+  [P3] geçti: 9   kaldı: 0   atlandı: 0
+  [P3] RESULT: PASS
+  [P4] R does not see conda tools
+  [P5] data/, results/, .Rproj.user ignored; envs/ tracked
+  [D1.1] clean
+  [D1.2] 
+  [D1.2] # conda environments:
+  [D1.2] #
+  [D1.2] # * -> active
+  [D1.2] # + -> frozen
+  [D1.2] base                 *   /opt/conda
+  [D1.2] rnaseq-ready             /opt/conda/envs/rnaseq-ready
+  [D1.2] variants-ready           /opt/conda/envs/variants-ready
+  [D1.3] 
+  [D1.3] 1. gün başlangıç kontrolü
+  [D1.3] 
+  [D1.3]   PASS  Çalışma klasörünüz depo klasörüdür
+  [D1.3]   PASS  R 4.6.1 çalışıyor
+  [D1.3]   PASS  conda kurulu
+  [D1.3]   PASS  Depo GitHub'a bağlı: /tmp/github/bioinfo-workshop.git
+  [D1.3]   PASS  git kullanıcı adı ve e-posta tanımlı
+  [D1.3] 
+  [D1.3] ----------------------------------------
+  [D1.3] geçti: 5   kaldı: 0   atlandı: 0
+  [D1.3] RESULT: PASS
+  [D1.3] check/day1-start.txt yazıldı. Bu dosyayı sürüm olarak kaydediniz ve GitHub'a gönderiniz.
+  [D1.4] 
+  [D1.5] conda-forge, bioconda
+  [D1.6] Retrieving notices: ...working... done
+  [D1.6] Channels:
+  [D1.6]  - bioconda
+  [D1.6]  - conda-forge
+  [D1.6] Platform: linux-64
+  [D1.6] Collecting package metadata (repodata.json): ...working... done
+  [D1.6] Solving environment: ...working... done
+  [D1.6] 
+  [D1.6] ## Package Plan ##
+  [D1.6] 
+  [D1.6]   environment location: /opt/conda/envs/deneme
+  [D1.6] 
+  [D1.6]   added / updated specs:
+  [D1.6]     - seqkit
+  [D1.6] 
+  [D1.6] 
+  [D1.6] The following NEW packages will be INSTALLED:
+  [D1.6] 
+  [D1.6]   seqkit             bioconda/linux-64::seqkit-2.14.0-hb192632_0 
+  [D1.6] 
+  [D1.6] 
+  [D1.6] 
+  [D1.6] Downloading and Extracting Packages: ...working... done
+  [D1.6] Preparing transaction: ...working... done
+  [D1.6] Verifying transaction: ...working... done
+  [D1.6] Executing transaction: ...working... done
+  [D1.6] #
+  [D1.6] # To activate this environment, use
+  [D1.6] #
+  [D1.6] #     $ conda activate deneme
+  [D1.6] #
+  [D1.6] # To deactivate an active environment, use
+  [D1.6] #
+  [D1.6] #     $ conda deactivate
+  [D1.7] seqkit v2.14.0
+  [D1.8] seqkit gone after deactivate
+  [D1.9] bcftools                     1.24             h118bc1c_2            bioconda
+  [D1.10] Channels:
+  [D1.10]  - bioconda
+  [D1.10]  - conda-forge
+  [D1.10] Platform: linux-64
+  [D1.10] Collecting package metadata (repodata.json): ...working... done
+  [D1.10] Solving environment: ...working... done
+  [D1.10] 
+  [D1.10] ## Package Plan ##
+  [D1.10] 
+  [D1.10]   environment location: /opt/conda/envs/deneme
+  [D1.10] 
+  [D1.10]   added / updated specs:
+  [D1.10]     - seqtk
+  [D1.10] 
+  [D1.10] 
+  [D1.10] The following NEW packages will be INSTALLED:
+  [D1.10] 
+  [D1.10]   _openmp_mutex      conda-forge/linux-64::_openmp_mutex-4.5-20_gnu 
+  [D1.10]   libgcc             conda-forge/linux-64::libgcc-16.2.0-ha9f2e26_7 
+  [D1.10]   libgomp            conda-forge/linux-64::libgomp-16.2.0-he0feb66_7 
+  [D1.10]   libzlib            conda-forge/linux-64::libzlib-1.3.2-h25fd6f3_3 
+  [D1.10]   seqtk              bioconda/linux-64::seqtk-1.5-h577a1d6_1 
+  [D1.10] 
+  [D1.10] 
+  [D1.10] 
+  [D1.10] Downloading and Extracting Packages: ...working... done
+  [D1.10] Preparing transaction: ...working... done
+  [D1.10] Verifying transaction: ...working... done
+  [D1.10] Executing transaction: ...working... done
+  [D1.11] name: deneme
+  [D1.11] channels:
+  [D1.11]   - conda-forge
+  [D1.11]   - bioconda
+  [D1.11] dependencies:
+  [D1.11]   - seqkit
+  [D1.11]   - seqtk
+  [D1.11] prefix: /opt/conda/envs/deneme
+  [D1.11b] /opt/conda/envs/deneme-kopya/bin/seqkit
+  [D1.11b] /opt/conda/envs/deneme-kopya/bin/seqtk
+  [D1.11b] the exported file rebuilds the environment
+  [D1.12] deneme removed
+  [D1.13]   typing-inspection  conda-forge/noarch::typing-inspection-0.4.4-pyhcf101f3_0 
+  [D1.13]   typing_extensions  conda-forge/noarch::typing_extensions-4.16.0-pyhcf101f3_0 
+  [D1.13]   tzdata             conda-forge/noarch::tzdata-2026c-h151e31d_0 
+  [D1.13]   urllib3            conda-forge/noarch::urllib3-2.8.0-pyhd8ed1ab_0 
+  [D1.13]   xorg-libice        conda-forge/linux-64::xorg-libice-1.1.2-h280c20c_0 
+  [D1.13]   xorg-libsm         conda-forge/linux-64::xorg-libsm-1.2.6-h0d788c3_1 
+  [D1.13]   xorg-libx11        conda-forge/linux-64::xorg-libx11-1.8.13-he1eb515_1 
+  [D1.13]   xorg-libxau        conda-forge/linux-64::xorg-libxau-1.0.12-h7cc23a3_2 
+  [D1.13]   xorg-libxdmcp      conda-forge/linux-64::xorg-libxdmcp-1.1.5-h7cc23a3_2 
+  [D1.13]   xorg-libxext       conda-forge/linux-64::xorg-libxext-1.3.7-h7cc23a3_1 
+  [D1.13]   xorg-libxfixes     conda-forge/linux-64::xorg-libxfixes-6.0.2-h7cc23a3_1 
+  [D1.13]   xorg-libxi         conda-forge/linux-64::xorg-libxi-1.8.3-h7cc23a3_1 
+  [D1.13]   xorg-libxrandr     conda-forge/linux-64::xorg-libxrandr-1.5.5-h7cc23a3_1 
+  [D1.13]   xorg-libxrender    conda-forge/linux-64::xorg-libxrender-0.9.12-hb03c661_1 
+  [D1.13]   xorg-libxt         conda-forge/linux-64::xorg-libxt-1.3.1-h7cc23a3_1 
+  [D1.13]   xorg-libxtst       conda-forge/linux-64::xorg-libxtst-1.2.5-h7cc23a3_4 
+  [D1.13]   yaml               conda-forge/linux-64::yaml-0.2.5-hebe6cf0_3 
+  [D1.13]   zipp               conda-forge/noarch::zipp-4.1.1-pyh5ded981_0 
+  [D1.13]   zlib-ng            conda-forge/linux-64::zlib-ng-2.3.3-hce19668_1 
+  [D1.13]   zstd               conda-forge/linux-64::zstd-1.5.7-hb78ec9c_7 
+  [D1.13] 
+  [D1.13] 
+  [D1.13] 
+  [D1.13] Downloading and Extracting Packages: ...working... done
+  [D1.13] Preparing transaction: ...working... done
+  [D1.13] Verifying transaction: ...working... done
+  [D1.13] Executing transaction: ...working... done
+  [D1.13] WARNING conda.conda_pypi.main:notify_externally_managed_future(156): 
+  [D1.13]   Did you know? You can install many PyPI packages with conda
+  [D1.13]   using the conda-pypi beta. Get started:
+  [D1.13]     https://docs.conda.io/projects/conda/en/stable/new-features.html
+  [D1.13] 
+  [D1.13] #
+  [D1.13] # To activate this environment, use
+  [D1.13] #
+  [D1.13] #     $ conda activate rnaseq
+  [D1.13] #
+  [D1.13] # To deactivate an active environment, use
+  [D1.13] #
+  [D1.13] #     $ conda deactivate
+  [D1.14] salmon 2.8.0
+  [D1.15] 
+  [D1.15] 1. gün ortam (environment) kontrolü
+  [D1.15] 
+  [D1.15]   PASS  envs/deneme.yml var ve içinde seqkit yazılı
+  [D1.15]   PASS  deneme ortamı silinmiş
+  [D1.15]   PASS  envs/rnaseq.yml var
+  [D1.15]   PASS  envs/rnaseq.yml içinde ortamın adı rnaseq
+  [D1.15]   PASS  Kanallar (channels) yazılı: conda-forge ve bioconda
+  [D1.15]   PASS  Dört araç yazılı: salmon, fastp, fastqc, multiqc
+  [D1.15]   PASS  rnaseq ortamı oluşturulmuş
+  [D1.15]   PASS  rnaseq ortamında salmon çalışıyor
+  [D1.15] 
+  [D1.15] ----------------------------------------
+  [D1.15] geçti: 8   kaldı: 0   atlandı: 0
+  [D1.15] RESULT: PASS
+  [D1.16] salmon_quant.SRR1039521.tar.gz: OK
+  [D1.16] tx2gene.gencode.v50.tsv.gz: OK
+  [D1.16] SRR1039512
+  [D1.16] SRR1039513
+  [D1.16] SRR1039516
+  [D1.16] SRR1039517
+  [D1.16] SRR1039520
+  [D1.16] SRR1039521
+  [D1.17] downloads and outputs stay out of git
+  [D1.18] 

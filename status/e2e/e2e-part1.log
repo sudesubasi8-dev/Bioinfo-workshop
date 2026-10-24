@@ -1,0 +1,27 @@
+
+== e2e pre day1  2026-10-05 16:41:06 +03  7722bfd731c3 ==
+P1     PASS    0s  Terminal opens in the repository folder
+P2     PASS    0s  First prompt shows (base)
+P3     PASS   10s  bash check/preflight.sh -> RESULT: PASS, no FAIL
+P4     PASS    0s  R Console does not see conda tools
+P5     PASS    0s  .gitignore: data/, results/ out; envs/ in
+D1.1   PASS    0s  git status: nothing to commit
+D1.2   PASS    1s  conda env list: base, rnaseq-ready, variants-ready; rnaseq/variants/deneme free
+D1.3   PASS    0s  bash check/day1-start.sh -> PASS, writes check/day1-start.txt
+D1.4   PASS    1s  git add, commit, push (no prompt) -> on GitHub
+D1.5   PASS    0s  conda config --show channels: conda-forge then bioconda
+D1.6   PASS    2s  conda create -n deneme -c bioconda seqkit
+D1.7   PASS    0s  conda activate deneme; which seqkit; seqkit version
+D1.8   PASS    1s  conda deactivate -> seqkit no longer found
+D1.9   PASS    1s  conda list -n variants-ready shows bcftools
+D1.10  PASS    2s  conda install -n deneme -c bioconda seqtk
+D1.11  PASS    0s  conda env export --from-history > envs/deneme.yml (seqkit, seqtk, no build strings)
+D1.11b PASS    3s  the exported envs/deneme.yml rebuilds the environment under a new name
+D1.12  PASS    3s  conda env remove -n deneme
+D1.13  PASS   47s  write envs/rnaseq.yml from envs/README.md; conda env create -f
+D1.14  PASS    1s  conda activate rnaseq: salmon 2.8.0, fastp 1.3.7, multiqc 1.35
+D1.15  PASS    1s  bash check/day1-envs.sh -> PASS
+D1.16  PASS   17s  bash setup/day1.sh: 14 files OK, 6 quant folders
+D1.17  PASS    0s  data/ and results/ do not show in git status
+D1.18  PASS    0s  commit and push envs/ and scripts/
+== e2e result: 24 PASS, 0 FAIL ==

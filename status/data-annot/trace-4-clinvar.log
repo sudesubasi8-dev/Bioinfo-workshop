@@ -1,0 +1,100 @@
++ c=https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38
++ got=
++ for u in "$c/clinvar_${CLINVAR_DATE}.vcf.gz" "$c/weekly/clinvar_${CLINVAR_DATE}.vcf.gz" "$c/archive_2.0/${CLINVAR_DATE:0:4}/clinvar_${CLINVAR_DATE}.vcf.gz"
++ curl -fsSL --retry 3 -o clinvar.vcf.gz https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar_20261011.vcf.gz
++ curl -fsSL --retry 3 -o clinvar.vcf.gz.tbi https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar_20261011.vcf.gz.tbi
++ got=https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar_20261011.vcf.gz
++ break
++ '[' -z https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar_20261011.vcf.gz ']'
++ echo 'ClinVar from: https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar_20261011.vcf.gz'
++ tee log/clinvar.log
+ClinVar from: https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/clinvar_20261011.vcf.gz
++ /opt/conda/envs/variants-ready/bin/bcftools view -h clinvar.vcf.gz
+++ grep -m1 '^##fileDate' clinvar.header.txt
+++ cut -d= -f2
+++ tr -d -
++ date=20261011
++ test 20261011 = 20261011
++ tee -a log/clinvar.log
++ echo 'ClinVar file date: 20261011'
+ClinVar file date: 20261011
++ grep -m3 -E '^##(source|reference)' clinvar.header.txt
++ tee -a log/clinvar.log
+##source=ClinVar
+##reference=GRCh38
++ start=10000000-12000000
++ start=10000000
++ end=12000000
+++ cut -f2 chr20.fa.fai
++ len=64444167
++ awk -v len=64444167 'BEGIN { FS = OFS = "\t" }
+      /^##contig=<ID=20[,>]/ { next }
+      /^#CHROM/ { print "##contig=<ID=chr20,length=" len ">"
+                  print "##INFO=<ID=CLNVID,Number=1,Type=Integer,Description=\"ClinVar Variation ID: the number at the end of the address www.ncbi.nlm.nih.gov/clinvar/variation/NUMBER\">"
+                  print; next }
+      /^#/ { print; next }
+      { $1 = "chr20"; $8 = "CLNVID=" $3 ($8 == "." ? "" : ";" $8); print }'
++ /opt/conda/envs/variants-ready/bin/bcftools annotate -x '^INFO/CLNVID,INFO/ALLELEID,INFO/CLNSIG,INFO/CLNREVSTAT,INFO/CLNDN,INFO/GENEINFO,INFO/MC,INFO/CLNVC,INFO/CLNHGVS' -Ou
++ /opt/conda/envs/variants-ready/bin/bcftools view -r 20:10000000-12000000 clinvar.vcf.gz
++ /opt/conda/envs/variants-ready/bin/bcftools norm -f chr20.fa -c w -m -any -Oz -o out/clinvar_20261011.window.vcf.gz
+Lines   total/split/joined/realigned/mismatch_removed/dup_removed/skipped:	4127/0/0/0/0/0/0
++ /opt/conda/envs/variants-ready/bin/bcftools index -t out/clinvar_20261011.window.vcf.gz
++ tee -a log/clinvar.log
++ set +o pipefail
+++ wc -l
+++ /opt/conda/envs/variants-ready/bin/bcftools view -H out/clinvar_20261011.window.vcf.gz
++ echo 'ClinVar records in window: 4127'
+ClinVar records in window: 4127
++ echo 'by CLNSIG:'
+by CLNSIG:
++ sort
++ uniq -c
++ /opt/conda/envs/variants-ready/bin/bcftools query -f '%INFO/CLNSIG\n' out/clinvar_20261011.window.vcf.gz
++ head -20
++ sort -k1,1nr
+   1471 Uncertain_significance
+    971 Likely_benign
+    476 .
+    396 Pathogenic
+    301 Conflicting_classifications_of_pathogenicity
+    218 Likely_pathogenic
+    139 Benign
+     83 Benign/Likely_benign
+     68 Pathogenic/Likely_pathogenic
+      3 not_provided
+      1 risk_factor
++ echo 'by gene (GENEINFO):'
+by gene (GENEINFO):
++ /opt/conda/envs/variants-ready/bin/bcftools query -f '%INFO/GENEINFO\n' out/clinvar_20261011.window.vcf.gz
++ sort
++ uniq -c
++ cut -d: -f1
++ sort -k1,1nr
++ head -20
+   2858 JAG1
+    742 MKKS
+    272 SNAP25
+    141 ANKEF1
+     57 SLX4IP
+     51 BTBD3
+      5 SNAP25-AS1
+      1 LOC339593
++ echo 'by review status (CLNREVSTAT):'
+by review status (CLNREVSTAT):
++ /opt/conda/envs/variants-ready/bin/bcftools query -f '%INFO/CLNREVSTAT\n' out/clinvar_20261011.window.vcf.gz
++ sort
++ uniq -c
++ sort -k1,1nr
++ head -10
+   2399 criteria_provided,_single_submitter
+    843 criteria_provided,_multiple_submitters,_no_conflicts
+    476 .
+    301 criteria_provided,_conflicting_classifications
+    105 no_assertion_criteria_provided
+      3 no_classification_provided
++ /opt/conda/envs/variants-ready/bin/bcftools view -H out/clinvar_20261011.window.vcf.gz
++ head -3
++ cut -c1-400
+chr20	10024226	4447638	A	C	.	.	CLNVID=4447638;ALLELEID=4562244;CLNHGVS=NC_000020.11:g.10024226A>C;CLNVC=single_nucleotide_variant;GENEINFO=SNAP25-AS1:100131208;MC=SO:0001619|non-coding_transcript_variant
+chr20	10024988	4447640	C	A	.	.	CLNVID=4447640;ALLELEID=4562246;CLNHGVS=NC_000020.11:g.10024988C>A;CLNVC=single_nucleotide_variant;GENEINFO=SNAP25-AS1:100131208;MC=SO:0001619|non-coding_transcript_variant
+chr20	10026704	4447641	C	T	.	.	CLNVID=4447641;ALLELEID=4562247;CLNHGVS=NC_000020.11:g.10026704C>T;CLNVC=single_nucleotide_variant;GENEINFO=SNAP25-AS1:100131208;MC=SO:0001627|intron_variant

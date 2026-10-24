@@ -1,0 +1,24 @@
+kept INFO fields: INFO/AC,INFO/AN,INFO/AF,INFO/nhomalt,INFO/grpmax,INFO/AF_grpmax,INFO/fafmax_faf95_max
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Alternate allele count">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Alternate allele frequency">
+##INFO=<ID=grpmax,Number=A,Type=String,Description="Genetic ancestry group with the maximum allele frequency">
+##INFO=<ID=fafmax_faf95_max,Number=A,Type=Float,Description="Maximum filtering allele frequency (using Poisson 95% CI) across genetic ancestry groups">
+##INFO=<ID=nhomalt,Number=A,Type=Integer,Description="Count of homozygous individuals">
+##INFO=<ID=AF_grpmax,Number=A,Type=Float,Description="Maximum allele frequency across genetic ancestry groups">
+##INFO=<ID=gnomAD_AC,Number=A,Type=Integer,Description="gnomAD v4.1 genomes: Alternate allele count">
+##INFO=<ID=gnomAD_AN,Number=1,Type=Integer,Description="gnomAD v4.1 genomes: Total number of alleles">
+##INFO=<ID=gnomAD_AF,Number=A,Type=Float,Description="gnomAD v4.1 genomes: Alternate allele frequency">
+##INFO=<ID=gnomAD_grpmax,Number=A,Type=String,Description="gnomAD v4.1 genomes: Genetic ancestry group with the maximum allele frequency">
+##INFO=<ID=gnomAD_FAF95,Number=A,Type=Float,Description="gnomAD v4.1 genomes: Maximum filtering allele frequency (using Poisson 95% CI) across genetic ancestry groups">
+##INFO=<ID=gnomAD_nhomalt,Number=A,Type=Integer,Description="gnomAD v4.1 genomes: Count of homozygous individuals">
+##INFO=<ID=gnomAD_AF_grpmax,Number=A,Type=Float,Description="gnomAD v4.1 genomes: Maximum allele frequency across genetic ancestry groups">
+gnomAD records in window: 442329
+chr20	10000004	rs1004639863	A	G	.	PASS	gnomAD_AC=5;gnomAD_AN=152208;gnomAD_AF=3.28498e-05;gnomAD_nhomalt=0
+chr20	10000006	rs949540033	G	C	.	PASS	gnomAD_AC=1;gnomAD_AN=152200;gnomAD_AF=6.5703e-06;gnomAD_grpmax=afr;gnomAD_nhomalt=0;gnomAD_AF_grpmax=2.41208e-05
+chr20	10000019	rs1982878476	G	A	.	PASS	gnomAD_AC=1;gnomAD_AN=152194;gnomAD_AF=6.57056e-06;gnomAD_grpmax=amr;gnomAD_nhomalt=0;gnomAD_AF_grpmax=6.5445e-05
+total 12832
+-rw-r--r-- 1 root root  2911380 Oct 13 22:52 chr20.ensembl116.gff3.gz
+-rw-r--r-- 1 root root   212279 Oct 13 22:52 chr20.ensembl116.mane.gff3.gz
+-rw-r--r-- 1 root root 10009893 Oct 13 22:52 gnomad.genomes.v4.1.window.vcf.gz
+-rw-r--r-- 1 root root     1644 Oct 13 22:52 gnomad.genomes.v4.1.window.vcf.gz.tbi

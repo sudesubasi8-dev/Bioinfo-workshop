@@ -1,0 +1,12 @@
+indexed 642692 references (k=31, m=19)
+transcripts: 644292
+genes: 78733
+transcripts in GENCODE file: 670670; kept (in the GTF): 644292; tx2gene rows: 644292
+salmon 2.8.0
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:06.93
+	Maximum resident set size (kbytes): 5156688
+2.0G	salmon_index
+199M	out/gencode.v50.transcripts.chr.fa.gz
+700K	out/genes.gencode.v50.tsv.gz
+488M	out/salmon_index.gencode.v50.tar.gz
+3.2M	out/tx2gene.gencode.v50.tsv.gz
