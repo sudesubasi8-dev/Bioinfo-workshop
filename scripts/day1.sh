@@ -89,3 +89,8 @@ length_gap <- quant_508$Length[long_tx] - quant_508$EffectiveLength[long_tx]
 summary(length_gap)
 multiqc -f -q -o results/multiqc results/fastqc results/fastqc_trimmed results/fastp results/salmon
 awk -F'\t' 'NR == 1 || $2 != ""' results/multiqc/multiqc_data/multiqc_general_stats.txt | cut -f1-4
+git add scripts/
+git commit -m "Day 1: reads to counts"
+git push
+git remote set-url origin https://sudesubasi8-dev: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@github.com/sudesubasi8-dev/Bioinfo-workshop.git
+git push
