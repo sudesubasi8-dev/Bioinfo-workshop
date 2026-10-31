@@ -94,3 +94,15 @@ git commit -m "Day 1: reads to counts"
 git push
 git remote set-url origin https://sudesubasi8-dev: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@github.com/sudesubasi8-dev/Bioinfo-workshop.git
 git push
+git add scripts/
+git commit -m "Day 1: differential expression"
+git push
+git log --oneline
+git status
+mkdir -p results/robustness
+salmon quant -i results/salmon_index -l A \
+-1 data/SRR1039508_1.sub.fastq.gz -2 data/SRR1039508_2.sub.fastq.gz \
+-p 2 -o results/robustness/SRR1039508_raw > /dev/null 2>&1
+echo "untrimmed: $(grep -o '"percent_mapped": [0-9.]*' results/robustness/SRR1039508_raw/aux_info/meta_info.json)"
+echo "trimmed: $(grep -o '"percent_mapped": [0-9.]*' results/salmon/SRR1039508/aux_info/meta_info.json)"
+raw_vs_trimmed <- tximport(c(trimmed = "results/salmon/SRR1039508/quant.sf", raw = "results/robustness/SRR1039508_raw/quant.sf"), type = "salmon", tx2gene = tx2gene)$counts

@@ -157,4 +157,18 @@ sig |> filter(log2FoldChange < 0) |> pull(gene_name) |> unique() |>
   writeLines("results/genes_down.txt")
 saveRDS(dds, "results/dds_day1.rds")
 list.files("results", pattern = "tsv|txt|rds")
-
+library(tximport)
+raw_vs_trimmed <- tximport(c(trimmed = "results/salmon/SRR1039508/quant.sf", raw = "results/robustness/SRR1039508_raw/quant.sf"), type = "salmon", tx2gene = tx2gene)$counts
+raw_vs_trimmed <- raw_vs_trimmed[raw_vs_trimmed[, "trimmed"] >= 10, ]
+count_change <- raw_vs_trimmed[, "raw"] / raw_vs_trimmed[, "trimmed"] - 1
+c(genes = nrow(raw_vs_trimmed),
+  pct_changed_over_5 = round(100 * mean(abs(count_change) > 0.05), 1),
+  pct_changed_over_10 = round(100 * mean(abs(count_change) > 0.10), 1),
+  median_change_pct = round(100 * median(count_change), 1),
+  median_reads_all = round(median(raw_vs_trimmed[, "trimmed"])),
+  median_reads_changed_over_5 = round(median(raw_vs_trimmed[abs(count_change) > 0.05,
+                                                            "trimmed"])))
+reads_all <- median(raw_vs_trimmed[, "trimmed"])
+reads_changed <- median(raw_vs_trimmed[abs(count_change) > 0.05, "trimmed"])
+significant_genes <- function(r) rownames(r)[which(r$padj < 0.05 & abs(r$log2FoldChange) > 1)]
+dds_all <- DESeqDataSetFromTximport(txi, colData = coldata, design = ~ cell + dex)
